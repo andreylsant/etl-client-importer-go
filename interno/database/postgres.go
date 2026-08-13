@@ -1,10 +1,15 @@
 package database
 
-import "github.com/andreylsant/etldecliente/interno/model"
+import (
+	"github.com/andreylsant/etldecliente/interno/model"
+	"gorm.io/gorm"
+)
 
-type Database struct{
+type Database struct {
+	Db *gorm.DB
 }
 
-func (db *Database) SaveCliente(cliente *model.Cliente) error{
+func (db *Database) SaveCliente(cliente *model.Cliente) error {
+	db.Db.Save(cliente)
 	return nil
 }

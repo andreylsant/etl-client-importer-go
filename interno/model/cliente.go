@@ -8,6 +8,8 @@ type Cliente struct {
 	Cidade string
 }
 
+//Acrescentar regras de negocio na nossa entidade.
+//Boas proticas 
 func NewCliente(idade int, name, email, cidade string) *Cliente {
 	return &Cliente{
 		Idade:  idade,
