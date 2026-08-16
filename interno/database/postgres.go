@@ -10,6 +10,6 @@ type Database struct {
 }
 
 func (db *Database) SaveCliente(cliente *model.Cliente) error {
-	db.Db.Save(cliente)
-	return nil
+	tx:= db.Db.Create(cliente)
+	return tx.Error
 }

@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/andreylsant/etldecliente/interno/database"
 	"github.com/andreylsant/etldecliente/interno/etl"
 	"github.com/andreylsant/etldecliente/interno/model"
 )
 
 type ReaderEtl struct{
 	transforma etl.Transformar
+	db database.Database
 }
 
 // Essa func inicia uma leitura csv
@@ -30,6 +32,8 @@ func (retl *ReaderEtl) Reader(r io.Reader) ([]model.Cliente, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	//retl.db.SaveCliente(&cliente[])
 
 	return cliente, nil
 }

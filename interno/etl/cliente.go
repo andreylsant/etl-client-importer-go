@@ -12,9 +12,6 @@ func ValidarRegistro(registro []string) error {
 		return errors.New("[Error ao Validar registro] Quantidade de colunas incorreta!")
 	}
 	//Essa parte é para validar se os campos retornados estão vazios
-	/*for _, campos := range registro{
-		if campos !=
-	}*/
-
+	
 	return nil
 }

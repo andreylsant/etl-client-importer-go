@@ -1,5 +1,6 @@
 package database
 
+/*
 import (
 	"gorm.io/drive/postgres"
 	"gorm.io/gorm"
@@ -15,3 +16,4 @@ func NewDb() *gorm.DB {
 
 	return db
 }
+*/
